@@ -26,7 +26,9 @@ remaining_letters = []
 
 
 def remove_pair(input_str):
-    # when length is one, stop processing
+    # when length is one or less, stop processing
+    if not input_str:
+        return ""
     if len(input_str) == 1:
         remaining_letters.append(input_str[0])
         return input_str
@@ -46,5 +48,5 @@ def remove_pair(input_str):
 
 
 if __name__ == "__main__":
-    remove_pair("abcdaadhhhhhzppzl")
+    remove_pair("")
     print("".join(remaining_letters))
