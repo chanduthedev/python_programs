@@ -1,39 +1,12 @@
-# Check sub string letters present in the same order in the main string or not
+# Problem Statement: Check sub string letters present in the same order in the main string or not
 
 # Sample1:
 # Input main_str: abcdefglsyionghdfdfjki, substring: dfj
 # Output : Yes
 
 # Sample2:
-# Input: main_str: Jackfruit, substring: Jft
-# Output : Yes
-
-# Sample3:
 # Input main_str: Musk Melon,  substring: elm
 # Output : No
-
-# Sample4:
-# Input: main_string: Hello, subs_tring: ol
-# Output : No
-
-# input_str = "Musk Melon"
-
-# sub_str = "elm"
-
-# input_index = 0
-# substr_index = 0
-# isFound = False
-# for index, item in enumerate(input_str):
-#     if substr_index < len(sub_str) and input_str[index] == sub_str[substr_index]:
-#         substr_index = substr_index + 1
-#     if len(sub_str) <= substr_index:
-#         isFound = True
-#         break
-
-# if isFound:
-#     print("Yes")
-# else:
-#     print("No")
 
 
 def is_substr_found(main_str: str, sub_str: str) -> bool:
