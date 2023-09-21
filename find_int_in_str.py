@@ -1,8 +1,4 @@
-# Example 1:
-# input: word = "a123bc34d8ef34"
-
-# [123, 34, 8, 34]
-# len([123, 34, 8])
+# Given a alphanumeric string, find list of integers
 
 
 def find_ints_in_str(word: str) -> list:
@@ -13,11 +9,12 @@ def find_ints_in_str(word: str) -> list:
         try:
             int_value = int(char)
             temp_int_value = temp_int_value * 10 + int_value
-        except Exception:
+        except ValueError:
+            # ValueError exception means not a digit
+            # Append number to the list and reset temp_int_value to 0
             if temp_int_value:
                 ints_list.append(temp_int_value)
                 temp_int_value = 0
-                # continue
 
     # This check is for last char in the word
     if temp_int_value:
@@ -26,7 +23,7 @@ def find_ints_in_str(word: str) -> list:
 
 
 if __name__ == "__main__":
-    find_ints_in_str("a123bc34d8ef34")
+    print(find_ints_in_str("a123bc34d8ef34"))
 
 
 def test_find_ints_in_str_return_empty_list_for_only_chars():
